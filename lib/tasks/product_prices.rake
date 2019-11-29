@@ -1,9 +1,9 @@
-desk "Fetch product prices"
-task :fetch_prices => :envaronment do 
+desc "Fetch product prices"
+task :fetch_prices => :environment do 
   require 'nokogiri'
   require 'open-uri'
 
-  Product.find_all_by_price(nil).each do |product|
+  Car.find_or_create_by(nil).each do |product|
     url = "https://www.walmart.com/search/?query=macbook%20laptop&cat_id=3944&typeahead=macbook"
     doc = Nokogiri::HTML(open(url))
     puts  doc.css("title").text
