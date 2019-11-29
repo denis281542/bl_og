@@ -1,0 +1,2 @@
+module ScreenScrapingsHelper
+end

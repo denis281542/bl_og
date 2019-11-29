@@ -1,0 +1,2 @@
+class ScreenScraping < ApplicationRecord
+end

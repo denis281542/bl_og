@@ -1,0 +1,17 @@
+<%= form_with(model: screen_scraping, local: true) do |form| %>
+  <% if screen_scraping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(screen_scraping.errors.count, "error") %> prohibited this screen_scraping from being saved:</h2>
+
+      <ul>
+        <% screen_scraping.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
