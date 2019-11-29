@@ -4,9 +4,11 @@ require 'open-uri'
 
 url = "https://www.walmart.com/search/?query=macbook%20laptop&cat_id=3944&typeahead=macbook"
 doc = Nokogiri::HTML(open(url))
-puts  doc.at_css("title").text
+puts  doc.css("title").text
 doc.css(".u-size-1-5-xl").each do |items|
-  title = items.at_css(".line-clamp-2").text
+  title = items.css(".line-clamp-2").text
+  price = items.css(".price-main").text[/[0-9\.]+/]
+  puts  "#{title} - #{price}"
 end
 
 
