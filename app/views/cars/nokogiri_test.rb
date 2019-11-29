@@ -9,6 +9,7 @@ doc.css(".u-size-1-5-xl").each do |items|
   title = items.css(".line-clamp-2").text
   price = items.css(".price-main").text[/[0-9\.]+/]
   puts  "#{title} - #{price}"
+  #puts items.at_css(".line-clamp-2")[:href]
 end
 
 
