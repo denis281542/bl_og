@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'pages/p1'
   get 'pages/p2'
   get 'pages/p3'
+  get 'parser/parser'
+
   resources :screen_scrapings
   resources :cars
   get 'article/index'
