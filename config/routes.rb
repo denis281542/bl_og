@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/p1'
-  root to: 'pages#p2'
+  get 'pages/p2'
   get 'pages/p3'
   resources :screen_scrapings
   resources :cars
@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-   'cars#index'
+  root 'cars#index'
 end
