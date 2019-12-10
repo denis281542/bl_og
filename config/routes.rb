@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/p1'
+  get 'pages/test'
   get 'pages/p2'
   get 'pages/p3'
   get 'parser/parser'

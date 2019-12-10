@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  def p1
+  
+  def test
   end
 
   def p2
@@ -7,4 +8,5 @@ class PagesController < ApplicationController
 
   def p3
   end
+  
 end
