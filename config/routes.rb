@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/test'
+  resources :users
+  root 'pages#test'
+
+  get 'cars/index'
   get 'pages/p2'
   get 'pages/p3'
   get 'parser/parser'
@@ -14,6 +17,4 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
-
-  root 'cars#index'
 end
